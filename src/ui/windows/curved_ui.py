@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import Frame
 from ui.elements.enter_variable import EnterVariable
-
+from lab_one.formulas.multiple import calculate_curved_function
 
 class CurvedUI(tk.Toplevel):
     def __init__(self, master: tk.Tk):
@@ -18,8 +18,20 @@ class CurvedUI(tk.Toplevel):
         self.a.grid(row=0, column=0)
         self.c = EnterVariable(frame, "Введіть значення c")
         self.c.grid(row=1, column=0)
-        self.x = EnterVariable(frame, "Введіть значення k")
-        self.x.grid(row=2, column=0)
-        self.x = EnterVariable(frame, "Введіть значення p")
-        self.x.grid(row=3, column=0)
+        self.k = EnterVariable(frame, "Введіть значення k")
+        self.k.grid(row=2, column=0)
+        self.p = EnterVariable(frame, "Введіть значення p")
+        self.p.grid(row=3, column=0)
 
+        self.answer = tk.Label(frame, text="Відповідь")
+        self.answer.grid(row=4, column=0, columnspan=2)
+
+        tk.Button(frame, text="Розрахувати", command=lambda: self.calculation_process()).grid(row=5, column=0)
+
+
+    def calculation_process(self):
+        a = self.a.value
+        k = self.k.value
+        c = self.c.value
+        p = self.p.value
+        self.answer["text"] = f"Y1: {calculate_curved_function(a=a, c=c, p=p, k=k)}"
