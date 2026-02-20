@@ -5,12 +5,12 @@ from ui.elements.enter_variable import EnterVariable
 
 
 
-class LinearUI(tk.Toplevel):
+class CycledUI(tk.Toplevel):
     def __init__(self, master: tk.Tk ):
         super().__init__(master)
 
 
-        self.title("Linear")
+        self.title("Cycled")
         self.master = master
 
 
@@ -20,9 +20,8 @@ class LinearUI(tk.Toplevel):
 
 
 
-        self.a = EnterVariable(frame, "Введіть значення а")
+        self.a = EnterVariable(frame, "Введіть список значень а")
         self.a.grid(row=0, column=0)
-        self.c = EnterVariable(frame, "Введіть значення c")
+        self.c = EnterVariable(frame, "Введіть список значень b")
         self.c.grid(row=1, column=0)
-        self.x = EnterVariable(frame, "Введіть значення x")
-        self.x.grid(row=2, column=0)
+
