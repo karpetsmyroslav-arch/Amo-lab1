@@ -6,9 +6,14 @@ from ui.windows.cycled_ui import CycledUI
 
 def main():
     root = tk.Tk()
-    tk.Button(root, text= "Open", command= lambda: LinearUI(root)).grid()
+
+    root.title("Calculator")
+    root.geometry("300x300")
+
+    tk.Button(root, text="Open", command=lambda: LinearUI(root)).grid()
     tk.Button(root, text="Open", command=lambda: CurvedUI(root)).grid()
     tk.Button(root, text="Open", command=lambda: CycledUI(root)).grid()
+
     root.mainloop()
 
 
