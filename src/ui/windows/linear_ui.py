@@ -12,7 +12,7 @@ class LinearUI(tk.Toplevel):
 
         self.title("Linear")
         self.master = master
-
+        self.geometry("300x300")
 
 
         frame = tk.Frame(self)
@@ -26,3 +26,8 @@ class LinearUI(tk.Toplevel):
         self.c.grid(row=1, column=0)
         self.x = EnterVariable(frame, "Введіть значення x")
         self.x.grid(row=2, column=0)
+
+        self.answer = tk.Label(frame,text="Відповідь")
+        self.answer.grid(row=3, column=0, columnspan=2)
+
+

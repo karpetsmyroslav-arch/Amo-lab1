@@ -10,6 +10,8 @@ class CurvedUI(tk.Toplevel):
 
         self.title("Curved")
         self.master = master
+        self.geometry("300x300")
+
 
         frame = tk.Frame(self)
         frame.grid()
