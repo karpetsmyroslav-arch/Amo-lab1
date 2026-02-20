@@ -1,0 +1,3 @@
+from lab_one.formulas.linar import calculate_linar_function
+from lab_one.formulas.multiple import calculate_curved_function
+from lab_one.formulas.cycle import calculate_cyclic
