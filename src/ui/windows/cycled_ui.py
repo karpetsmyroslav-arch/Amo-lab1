@@ -30,8 +30,8 @@ class CycledUI(tk.Toplevel):
         tk.Button(frame, text="Розрахувати", command=lambda: self.calculation_process()).grid(row=4, column=0)
 
     def calculation_process(self):
-        a = list(map(float, self.a.value.split(", ")))
-        c = list(map(float, self.c.value.split(", ")))
+        a = list(map(float, self.a.value.split(",")))
+        c = list(map(float, self.c.value.split(",")))
 
         self.answer["text"] = f"Y1: {calculate_cyclic(a=a, b=c)}"
 

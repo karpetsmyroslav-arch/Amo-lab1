@@ -32,8 +32,9 @@ class CurvedUI(tk.Toplevel):
 
 
     def calculation_process(self):
-        a = self.a.value
-        k = self.k.value
-        c = self.c.value
-        p = self.p.value
+        a = float(self.a.value)
+        k = float(self.k.value)
+        c = float(self.c.value)
+        p = float(self.p.value)
+
         self.answer["text"] = f"Y1: {calculate_curved_function(a=a, c=c, p=p, k=k)}"

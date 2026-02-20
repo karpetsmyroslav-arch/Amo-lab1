@@ -34,9 +34,10 @@ class LinearUI(tk.Toplevel):
 
 
     def calculation_process(self):
-        a = self.a.value
-        x = self.x.value
-        c = self.c.value
+        a = float(self.a.value)
+        x = float(self.x.value)
+        c = float(self.c.value)
+
         self.answer["text"] = f"Y1: {calculate_linar_function(a= a, c = c, x = x)}"
 
 
