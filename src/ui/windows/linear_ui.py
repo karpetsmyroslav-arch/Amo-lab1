@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import Frame
+from lab_one.formulas.linar import calculate_linar_function
 
 from ui.elements.enter_variable import EnterVariable
 
@@ -29,5 +29,15 @@ class LinearUI(tk.Toplevel):
 
         self.answer = tk.Label(frame,text="Відповідь")
         self.answer.grid(row=3, column=0, columnspan=2)
+
+        tk.Button(frame, text= "Розрахувати", command=lambda: self.calculation_process()).grid(row=4, column=0)
+
+
+    def calculation_process(self):
+        a = self.a.value
+        x = self.x.value
+        c = self.c.value
+        self.answer["text"] = f"Y1: {calculate_linar_function(a= a, c = c, x = x)}"
+
 
 
