@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import messagebox
 
 
 
@@ -10,3 +11,6 @@ class EnterVariable(tk.Frame):
         self.entry = tk.Entry(self)
         self.entry.grid(row=0, column=1)
 
+    @property
+    def value(self):
+        return self.entry.get()
