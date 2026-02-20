@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox
+
 
 
 class EnterVariable(tk.Frame):
@@ -12,8 +12,4 @@ class EnterVariable(tk.Frame):
 
     @property
     def value(self):
-        try:
-            return int(self.entry.get())
-        except ValueError:
-            messagebox.showerror("Ахтунг!", "Будь ласка, введіть коректне значення")
-            return 0
+        return self.entry.get()

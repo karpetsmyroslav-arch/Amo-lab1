@@ -6,10 +6,9 @@ from ui.windows.cycled_ui import CycledUI
 
 def main():
     root = tk.Tk()
-    linear_ui = LinearUI(root)
-    tk.Button(root, text= "Open", command= lambda: linear_ui.mainloop()).grid()
-    curved_ui = CurvedUI(root)
-    tk.Button(root, text="Open", command=lambda: curved_ui.mainloop()).grid()
+    tk.Button(root, text= "Open", command= lambda: LinearUI(root)).grid()
+    tk.Button(root, text="Open", command=lambda: CurvedUI(root)).grid()
+    tk.Button(root, text="Open", command=lambda: CycledUI(root)).grid()
     root.mainloop()
 
 
